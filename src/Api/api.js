@@ -20,3 +20,5 @@ export const getAllEpisodes = async () => {
   const apiEpisodes = await req.json();
   return apiEpisodes;
 }
+
+export default { getAllCharacters, getAllLocations, getAllEpisodes };
