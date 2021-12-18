@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import reducerWillChange from '';
+import charactersReducer from './characters/characters';
 
 const reducer = combineReducers({
-  reducerWillChange,
+  charactersReducer,
 })
 
 const store = createStore(
