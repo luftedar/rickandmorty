@@ -8,3 +8,9 @@ export const getAllCharacters = async () => {
   const apiCharacters = await req.json();
   return apiCharacters;
 }
+
+export const getAllLocations = async () => {
+  const req = await fetch(`${APIURL}/${LOCATIONS}`);
+  const apiLocations = await req.json();
+  return apiLocations;
+}
