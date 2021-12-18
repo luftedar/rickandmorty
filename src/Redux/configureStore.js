@@ -4,7 +4,7 @@ import charactersReducer from './characters/characters';
 
 const reducer = combineReducers({
   charactersReducer,
-})
+});
 
 const store = createStore(
   reducer,
