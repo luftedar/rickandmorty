@@ -1,17 +1,24 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Character from './Character'
-
+import Character from './Character';
+import { fetchAllCharacters } from '../Redux/characters/characters';
 
 function Characters() {
-  
+  const dispatch = useDispatch();
+  const characters = useSelector((state) => state.characters);
+  useEffect(() => { dispatch(fetchAllCharacters()); }, []);
   return (
     <div className="character-container">
       <ul>
-        <Character key={Character.id} character={character} />
+        {characters.map((character) => (
+          <Character
+            key={character.id}
+            character={character}
+          />
+        ))}
       </ul>
     </div>
-  )
+  );
 }
 
-export default Characters
+export default Characters;

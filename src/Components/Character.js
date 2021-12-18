@@ -1,12 +1,12 @@
-import React from 'react'
+/* eslint-disable */
 
 function Character(props) {
-  const { character } = props
+  const { character } = props;
   return (
     <li className="character-item">
       {character.name}
     </li>
-  )
+  );
 }
 
-export default Character
+export default Character;
