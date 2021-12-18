@@ -1,10 +1,10 @@
 /* eslint-disable */
 
-function Character(props) {
-  const { character } = props;
+function Character({ character }) {
+  console.log(character);
   return (
-    <li className="character-item">
-      {character.name}
+    <li className="character-item" key={character.id}>
+      Name: {character.name}
     </li>
   );
 }

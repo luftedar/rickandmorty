@@ -5,7 +5,7 @@ import { fetchAllCharacters } from '../Redux/characters/characters';
 
 function Characters() {
   const dispatch = useDispatch();
-  const characters = useSelector((state) => state.characters);
+  const characters = useSelector((state) => state.charactersReducer);
   useEffect(() => { dispatch(fetchAllCharacters()); }, []);
   return (
     <div className="character-container">

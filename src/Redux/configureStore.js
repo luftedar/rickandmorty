@@ -1,4 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import charactersReducer from './characters/characters';
 
@@ -8,7 +9,7 @@ const reducer = combineReducers({
 
 const store = createStore(
   reducer,
-  applyMiddleware(thunk),
+  applyMiddleware(thunk, logger),
 );
 
 export default store;
