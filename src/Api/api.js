@@ -14,14 +14,12 @@ export const getAllCharacters = async (page = 1) => {
 export const getAllLocations = async () => {
   const req = await fetch(`${APIURL}/${LOCATIONS}/${[...LOCATIONARRAY]}`);
   const apiLocations = await req.json();
-  console.log(apiLocations);
   return apiLocations;
 };
 
 export const getAllEpisodes = async () => {
   const req = await fetch(`${APIURL}/${EPISODES}/${[...EPISODESARRAY]}`);
   const apiEpisodes = await req.json();
-  console.log(apiEpisodes);
   return apiEpisodes;
 };
 

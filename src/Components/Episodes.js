@@ -6,7 +6,6 @@ import Episode from './Episode';
 function Episodes() {
   const dispatch = useDispatch();
   const episodes = useSelector((state) => state.episodesReducer);
-  console.log(episodes);
   useEffect(() => { dispatch(fetchAllEpisodes()); }, []);
   return (
     <div>

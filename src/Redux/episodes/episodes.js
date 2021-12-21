@@ -5,7 +5,6 @@ const initialState = [];
 
 export const fetchAllEpisodes = () => async (dispatch) => {
   const payload = await apiCalls.getAllEpisodes();
-  console.log(payload);
   dispatch({
     type: FETCH_EPISODES,
     payload,

@@ -10,10 +10,8 @@ function Characters() {
   useEffect(() => { dispatch(fetchAllCharacters()); }, []);
   const maxPageValue = Array.from({ length: 42 }, (_, i) => i + 1);
   const newPage = (pageValue) => {
-    console.log(pageValue);
     dispatch(fetchAllCharacters(pageValue));
   };
-  console.log(characters);
   return (
     <div className="character-container">
       <select name="page" id="pages" onChange={(e) => { newPage(e.target.value); }}>
