@@ -3,6 +3,7 @@ const CHARACTERS = 'character';
 const LOCATIONS = 'location';
 const EPISODES = 'episode';
 const LOCATIONARRAY = Array.from({ length: 126 }, (_, i) => i + 1);
+const EPISODESARRAY = Array.from({ length: 51 }, (_, i) => i + 1);
 
 export const getAllCharacters = async (page = 1) => {
   const req = await fetch(`${APIURL}/${CHARACTERS}/?page=${page}`);
@@ -18,7 +19,7 @@ export const getAllLocations = async () => {
 };
 
 export const getAllEpisodes = async () => {
-  const req = await fetch(`${APIURL}/${EPISODES}`);
+  const req = await fetch(`${APIURL}/${EPISODES}/${[...EPISODESARRAY]}`);
   const apiEpisodes = await req.json();
   console.log(apiEpisodes);
   return apiEpisodes;

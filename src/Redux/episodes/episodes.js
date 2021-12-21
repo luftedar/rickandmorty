@@ -4,8 +4,8 @@ const FETCH_EPISODES = 'charactersStore/characters/FETCH_EPISODES';
 const initialState = [];
 
 export const fetchAllEpisodes = () => async (dispatch) => {
-  const apiData = await apiCalls.getAllEpisodes();
-  const payload = apiData.results;
+  const payload = await apiCalls.getAllEpisodes();
+  console.log(payload);
   dispatch({
     type: FETCH_EPISODES,
     payload,
