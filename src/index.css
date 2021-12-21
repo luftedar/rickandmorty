@@ -70,3 +70,26 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.character-item {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.character-item:hover {
+  box-shadow: 0 10px 16px 20px rgba(0,0,0,0.2);
+}
+
+.character-image {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.list-of-characters {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+}

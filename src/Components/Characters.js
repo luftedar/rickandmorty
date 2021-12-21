@@ -29,7 +29,7 @@ function Characters() {
             />
           ))}
         </select>
-        <ul>
+        <ul className="list-of-characters">
           {characters.map((character) => (
             <Character
               key={character.id}
