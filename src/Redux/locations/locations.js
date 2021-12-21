@@ -7,7 +7,7 @@ export const fetchAllLocations = () => async (dispatch) => {
   const apiData = await apiCalls.getAllLocations();
   const payload = apiData.results;
   dispatch({
-    type: FETCH_CHARACTERS,
+    type: FETCH_LOCATIONS,
     payload,
   });
 };
