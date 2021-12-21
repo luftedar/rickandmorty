@@ -4,8 +4,7 @@ const FETCH_LOCATIONS = 'charactersStore/characters/FETCH_LOCATIONS';
 const initialState = [];
 
 export const fetchAllLocations = () => async (dispatch) => {
-  const apiData = await apiCalls.getAllLocations();
-  const payload = apiData.results;
+  const payload = await apiCalls.getAllLocations();
   dispatch({
     type: FETCH_LOCATIONS,
     payload,

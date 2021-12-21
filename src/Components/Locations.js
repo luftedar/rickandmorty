@@ -7,7 +7,6 @@ function Locations() {
   const dispatch = useDispatch();
   const locations = useSelector((state) => state.locationsReducer);
   useEffect(() => { dispatch(fetchAllLocations()); }, []);
-  console.log(locations);
   return (
     <div>
       <ul>
