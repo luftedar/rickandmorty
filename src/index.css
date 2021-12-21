@@ -47,6 +47,11 @@
   text-shadow: 2px 2px 9px #000;
 }
 
+.character-container {
+  padding: 10px;
+  margin: 0 20px;
+}
+
 .character-header {
   height: 40vh;
   text-align: left;
@@ -74,7 +79,7 @@
 .character-item {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 100%;
+  width: 80%;
   border-radius: 5px;
   list-style: none;
 }
@@ -90,6 +95,8 @@
 
 .list-of-characters {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
   gap: 40px;
 }
