@@ -2,9 +2,6 @@
 import { Link } from "react-router-dom";
 
 function Character({ character }) {
-  const seeMore = (e) => {
-    console.log(e.target)
-  }
   return (
     <li className="character-item" key={character.id}>
       <img src={character.image} alt={character.name} className="character-image"></img>
@@ -16,7 +13,7 @@ function Character({ character }) {
             Status: {character.status}
           </div>
           <div>
-            <Link to={`/characters/${character.id}`}>More</Link>
+            <Link to={`/character/${character.id}`}>More</Link>
           </div>
         </div>
       </div>

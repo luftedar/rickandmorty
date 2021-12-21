@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import { Route, Switch } from 'react-router-dom';
+import Characterdetails from './Characterdetails';
 import Characters from './Characters';
 import Episodes from './Episodes';
 import Home from './Home';
@@ -23,6 +24,9 @@ function Appcontainer() {
           <Episodes />
         </Route>
         <Route path="/about">
+        </Route>
+        <Route path="/character/:id" children={ <Characterdetails /> }>
+          <Characterdetails />
         </Route>
       </Switch>
     </div>
