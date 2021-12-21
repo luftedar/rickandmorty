@@ -3,8 +3,8 @@ import * as apiCalls from '../../Api/api';
 const FETCH_EPISODES = 'charactersStore/characters/FETCH_EPISODES';
 const initialState = [];
 
-export const fetchAllEpisodes = (page) => async (dispatch) => {
-  const apiData = await apiCalls.getAllCharacters(page);
+export const fetchAllEpisodes = () => async (dispatch) => {
+  const apiData = await apiCalls.getAllEpisodes();
   const payload = apiData.results;
   dispatch({
     type: FETCH_EPISODES,

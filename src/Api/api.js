@@ -20,6 +20,7 @@ export const getAllLocations = async () => {
 export const getAllEpisodes = async () => {
   const req = await fetch(`${APIURL}/${EPISODES}`);
   const apiEpisodes = await req.json();
+  console.log(apiEpisodes);
   return apiEpisodes;
 };
 
