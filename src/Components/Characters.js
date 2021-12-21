@@ -20,15 +20,17 @@ function Characters() {
         Total 826, Select Page Number From Dropdown List to Navigate
       </div>
       <div className="character-listing">
-        <div>Filter By Character</div>
-        <select name="page" id="pages" onChange={(e) => { newPage(e.target.value); }}>
-          {maxPageValue.map((number) => (
-            <Page
-              key={number}
-              number={number}
-            />
-          ))}
-        </select>
+        <div className="filter-status d-flex">
+          <div>Filter By Character</div>
+          <select name="page" id="pages" onChange={(e) => { newPage(e.target.value); }}>
+            {maxPageValue.map((number) => (
+              <Page
+                key={number}
+                number={number}
+              />
+            ))}
+          </select>
+        </div>
         <ul className="list-of-characters">
           {characters.map((character) => (
             <Character
