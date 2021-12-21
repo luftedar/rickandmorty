@@ -10,7 +10,7 @@ function Appcontainer() {
         </Route>
       </Switch>
     </div>
-  )
+  );
 }
 
-export default Appcontainer
+export default Appcontainer;
