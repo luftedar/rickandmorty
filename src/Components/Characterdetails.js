@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 
 function Characterdetails() {
   const pageURL = window.location.href;
-  const pageID = parseInt(pageURL.split('/')[4], 10);
+  const urlArray = pageURL.split('/');
+  const pageID = parseInt(urlArray[urlArray.length-1], 10);
   const characters = useSelector((state) => (state.charactersReducer));
   const trueCharacter = (characters.filter((character) => character.id === pageID))[0];
   return (
