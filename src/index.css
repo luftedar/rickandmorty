@@ -13,6 +13,22 @@
   justify-content: center;
 }
 
+.home-page::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("img/homeimage.jpg");
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
 .home-page {
   display: grid;
   grid: 1fr 1fr / 1fr 1fr;
@@ -21,5 +37,12 @@
 .home-link {
   width: calc(100vw / 2);
   height: calc(100vh / 2);
-  border: 1px solid #000;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #000
+}
+
+.home-link:hover {
+  box-shadow: -1px 1px 10px 5px #000;
+  text-shadow: 2px 2px 9px #000;
 }
