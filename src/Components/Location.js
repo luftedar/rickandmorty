@@ -1,9 +1,12 @@
+/* eslint-disable */
 function Location({ location }) {
   return (
     <li className="location-item" key={location.id}>
-      Name: {location.name}
+      Name:
+      {' '}
+      {location.name}
     </li>
-  )
+  );
 }
 
 export default Location;

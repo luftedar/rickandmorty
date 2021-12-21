@@ -1,11 +1,13 @@
-import { useEffect } from "react";
-import { useSelector, UseDispatch, useDispatch} from 'react-redux';
-import { fetchAllLocations } from '../Redux/locations/locations'
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchAllLocations } from '../Redux/locations/locations';
+import Location from './Location';
 
 function Locations() {
   const dispatch = useDispatch();
-  const locations = useSelector((state) => state.episodesReducer);
-  useEffect(() => { dispatch(fetchAllLocations()); }, [])
+  const locations = useSelector((state) => state.locationsReducer);
+  useEffect(() => { dispatch(fetchAllLocations()); }, []);
+  console.log(locations);
   return (
     <div>
       <ul>
@@ -17,7 +19,7 @@ function Locations() {
         ))}
       </ul>
     </div>
-  )
+  );
 }
 
-export default Locations
+export default Locations;
