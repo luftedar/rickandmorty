@@ -1,20 +1,12 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { getSingleCharacter } from '../Redux/characters/characters';
+import { useSelector } from 'react-redux';
 
 function Characterdetails() {
-  const dispatch = useDispatch();
   const pageURL = window.location.href;
   const pageID = parseInt(pageURL.split('/')[4], 10);
   console.log(pageID);
-  const character = useSelector((state) => (
-    state.length !== 1 ? state.charactersReducer : state));
-  useEffect(() => {
-    if (character.length !== 1) {
-      dispatch(getSingleCharacter(pageID));
-    }
-  }, []);
-  console.log('character', character);
+  const characters = useSelector((state) => (state.charactersReducer));
+  const trueCharacter = characters.filter((character) => character.id === pageID);
+  console.log(trueCharacter);
   return (
     <div>
       Deneme
