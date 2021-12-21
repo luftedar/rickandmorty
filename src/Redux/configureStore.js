@@ -1,4 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
 import charactersReducer from './characters/characters';
 import locationsReducer from './locations/locations';
@@ -10,9 +12,18 @@ const reducer = combineReducers({
   episodesReducer,
 });
 
-const store = createStore(
-  reducer,
+const persistConfig = {
+  key: 'root',
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, reducer);
+
+export const store = createStore(
+  persistedReducer,
   applyMiddleware(thunk),
 );
 
-export default store;
+export const persistor = persistStore(store);
+
+export default { store, persistor };
