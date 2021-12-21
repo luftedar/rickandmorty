@@ -1,8 +1,6 @@
-import { useSelector } from 'react-redux';
+import React from 'react';
 
 function Characterdetails() {
-  const characters = useSelector((state) => state.charactersReducer);
-  console.log(characters);
   return (
     <div>
       Deneme

@@ -11,6 +11,12 @@ export const getAllCharacters = async (page = 1) => {
   return apiCharacters;
 };
 
+export const getSingleCharacter = async (id) => {
+  const req = await fetch(`${APIURL}/${CHARACTERS}/${id}`);
+  const apiCharacter = await req.json();
+  return apiCharacter;
+};
+
 export const getAllLocations = async () => {
   const req = await fetch(`${APIURL}/${LOCATIONS}/${[...LOCATIONARRAY]}`);
   const apiLocations = await req.json();
