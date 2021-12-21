@@ -22,6 +22,8 @@ const charactersReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_CHARACTERS:
       return action.payload;
+    case GET_SINGLE_CHARACTER:
+      return [state.filter((character) => character.id === action.id)];
     default:
       return state;
   }
