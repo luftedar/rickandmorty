@@ -46,3 +46,27 @@
   box-shadow: -1px 1px 10px 5px #000;
   text-shadow: 2px 2px 9px #000;
 }
+
+.character-header {
+  height: 40vh;
+  text-align: left;
+  padding-top: 100px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.character-header::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40vh;
+  opacity: 0.3;
+  background-image: url("img/charactersimage.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

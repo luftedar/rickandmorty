@@ -14,22 +14,30 @@ function Characters() {
   };
   return (
     <div className="character-container">
-      <select name="page" id="pages" onChange={(e) => { newPage(e.target.value); }}>
-        {maxPageValue.map((number) => (
-          <Page
-            key={number}
-            number={number}
-          />
-        ))}
-      </select>
-      <ul>
-        {characters.map((character) => (
-          <Character
-            key={character.id}
-            character={character}
-          />
-        ))}
-      </ul>
+      <div className="character-header">
+        Characters
+        <br />
+        Total 826, Select Page Number From Dropdown List to Navigate
+      </div>
+      <div className="character-listing">
+        <div>Filter By Character</div>
+        <select name="page" id="pages" onChange={(e) => { newPage(e.target.value); }}>
+          {maxPageValue.map((number) => (
+            <Page
+              key={number}
+              number={number}
+            />
+          ))}
+        </select>
+        <ul>
+          {characters.map((character) => (
+            <Character
+              key={character.id}
+              character={character}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
