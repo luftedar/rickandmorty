@@ -3,8 +3,8 @@ const CHARACTERS = 'character';
 const LOCATIONS = 'location';
 const EPISODES = 'episode';
 
-export const getAllCharacters = async () => {
-  const req = await fetch(`${APIURL}/${CHARACTERS}`);
+export const getAllCharacters = async (page = 1) => {
+  const req = await fetch(`${APIURL}/${CHARACTERS}/?page=${page}`);
   const apiCharacters = await req.json();
   return apiCharacters;
 };
