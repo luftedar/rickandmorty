@@ -2,6 +2,7 @@
 
 import { Route, Switch } from 'react-router-dom';
 import Characters from './Characters';
+import Episodes from './Episodes';
 import Home from './Home';
 import Locations from './Locations';
 
@@ -18,7 +19,9 @@ function Appcontainer() {
         <Route path="/locations">
           <Locations />
         </Route>
-        <Route path="/episodes"></Route>
+        <Route path="/episodes">
+          <Episodes />
+        </Route>
         <Route path="/about">
         </Route>
       </Switch>

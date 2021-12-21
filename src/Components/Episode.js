@@ -1,9 +1,13 @@
+/* eslint-disable */
+
 function Episode({ episode }) {
   return (
     <li className="episode-item" key={episode.id}>
-      Name: {episode.name}
+      Name:
+      {' '}
+      {episode.name}
     </li>
-  )
+  );
 }
 
-export default Episode
+export default Episode;
