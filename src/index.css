@@ -167,3 +167,25 @@
   background-color: rgba(43, 219, 66, 0.952);
   box-shadow: 0 2px 4px 3px rgba(43, 219, 66, 0.95);
 }
+
+.char-details-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(186, 233, 147, 0.075);
+}
+
+.char-details {
+  position: absolute;
+  left: 40%;
+  top: 15%;
+  width: 302px;
+  height: 70%;
+  max-width: 60%;
+  background-color: #fff;
+  border: 1px solid #ebecf0;
+  border-radius: 8px;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+}
