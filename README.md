@@ -86,6 +86,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - This project is the Microverse's third module's capstone project
+- Thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is author of the original design.
 
 ## 📝 License
 
