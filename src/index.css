@@ -230,3 +230,27 @@
 .red-dot {
   background-color: red;
 }
+
+@media (max-width: 992px) {
+  .char-details {
+    left: 37%;
+  }
+}
+
+@media (max-width: 778px) {
+  .char-details {
+    left: 30%;
+  }
+}
+
+@media (max-width: 600px) {
+  .char-details {
+    left: 27%;
+  }
+}
+
+@media (max-width: 500px) {
+  .char-details {
+    left: 23%;
+  }
+}
