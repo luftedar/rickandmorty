@@ -16,7 +16,8 @@ Single Page Application that uses Rick and Morty API along with React & Redux. Y
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://rickandmortyandorcun.netlify.app/)
+[Loom Link](https://www.loom.com/share/8ba9509fc094404cbc624c6750de8955)
 
 
 ## Getting Started
