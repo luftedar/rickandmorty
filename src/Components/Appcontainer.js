@@ -9,7 +9,7 @@ import Locations from './Locations';
 
 function Appcontainer() {
   return (
-    <div>
+    <div className="app-container">
       <Switch>
         <Route exact path="/">
           <Home />
