@@ -24,23 +24,29 @@ function Characterdetails() {
           <div className="detail-desc">
             <h1>{trueCharacter.name}</h1>
             <ul className="detail-ul">
-              <li>Character Status:
+              <li>Status:
+                {"  "}
                 {trueCharacter.status === "Alive" ? 
-                <span> {trueCharacter.status} <div className="green-dot"/></span> :
+                <span> {trueCharacter.status} <div className="green-dot dot"/></span> :
                 trueCharacter.status === "Dead" ?
-                <span>{trueCharacter.status} <div className="red-dot"/></span> :
-                <span>{trueCharacter.status} <div className="black-dot" /></span>
+                <span>{trueCharacter.status} <div className="red-dot dot"/></span> :
+                <span>{trueCharacter.status} <div className="dot" /></span>
                 }
               </li>
-              <li>Species:
+              <li>Species: 
+              {"  "}
               {trueCharacter.species}</li>
-              <li>Gender:
+              <li>Gender: 
+              {"  "}
               {trueCharacter.gender}</li>
-              <li>Origin:
+              <li>Origin: 
+              {"  "}
               {trueCharacter.origin.name}</li>
-              <li>Location:
+              <li>Location: 
+              {"  "}
               {trueCharacter.location.name}</li>
               <li>Played Episodes:
+              {"  "}
               {trueCharacter.episode.length}</li>
             </ul>
           </div>

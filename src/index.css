@@ -196,8 +196,33 @@
 
 .go-back {
   position: absolute;
-  bottom: -52px;
-  right: 10px;
+  bottom: -61px;
+  right: 15px;
   font-size: 2rem;
   color: rgba(37, 197, 58, 0.952);
+}
+
+.detail-desc {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.detail-ul > li {
+  list-style: none;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.green-dot {
+  background-color: rgba(37, 197, 58, 0.952);
+}
+
+.red-dot {
+  background-color: red;
 }
