@@ -30,6 +30,13 @@
   align-items: center;
 }
 
+.home-go-back {
+  position: fixed;
+  top: 25px;
+  right: 50px;
+  font-size: 40px;
+}
+
 .home-page::before {
   content: ' ';
   display: block;

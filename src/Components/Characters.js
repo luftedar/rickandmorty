@@ -1,8 +1,11 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { BsBackspace } from 'react-icons/bs';
 import Character from './Character';
 import { fetchAllCharacters } from '../Redux/characters/characters';
 import Page from './Page';
+import Home from './Home';
 
 function Characters() {
   const dispatch = useDispatch();
@@ -14,6 +17,13 @@ function Characters() {
   };
   return (
     <div className="character-container">
+      <div className="home-go-back">
+        <Link to="/">
+          <BsBackspace>
+            <Home />
+          </BsBackspace>
+        </Link>
+      </div>
       <div className="character-header">
         Characters
         <br />
