@@ -18,7 +18,11 @@ function Characterdetails() {
             <img src={trueCharacter.image} alt={trueCharacter.image} />
           </div>
           <div className="go-back">
-            <Link to ="/characters"><BsBackspace color="red"><Characters /></BsBackspace></Link>
+            <Link to ="/characters">
+              <BsBackspace>
+                <Characters />
+              </BsBackspace>
+            </Link>
           </div>
           </div>
           <div className="detail-desc">

@@ -3,13 +3,9 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import thunk from 'redux-thunk';
 import charactersReducer from './characters/characters';
-import locationsReducer from './locations/locations';
-import episodesReducer from './episodes/episodes';
 
 const reducer = combineReducers({
   charactersReducer,
-  locationsReducer,
-  episodesReducer,
 });
 
 const persistConfig = {

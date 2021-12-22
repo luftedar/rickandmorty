@@ -46,16 +46,13 @@
   z-index: -1;
 }
 
-.home-page {
-  display: grid;
-  grid: 1fr 1fr / 1fr 1fr;
-}
-
 .home-link {
-  width: calc(100vw / 2);
+  width: 100vw;
   height: calc(100vh / 2);
   text-decoration: none;
   font-size: 3rem;
+  position: fixed;
+  top: 50%;
 }
 
 .home-link:hover {
