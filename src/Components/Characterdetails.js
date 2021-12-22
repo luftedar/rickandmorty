@@ -1,5 +1,8 @@
 /* eslint-disable */
 import { useSelector } from 'react-redux';
+import { BsBackspace } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import Characters from './Characters';
 
 function Characterdetails() {
   const pageURL = window.location.href;
@@ -9,6 +12,7 @@ function Characterdetails() {
   const trueCharacter = (characters.filter((character) => character.id === pageID))[0];
   return (
     <div>
+      <Link to ="/characters"><BsBackspace><Characters/></BsBackspace></Link>
       Character Name:
       {trueCharacter.name}
       Character Status:
