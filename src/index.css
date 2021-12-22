@@ -62,11 +62,6 @@
   text-shadow: 2px 2px 9px #000;
 }
 
-.character-container {
-  padding: 10px;
-  margin: 0 20px;
-}
-
 .character-header {
   height: 40vh;
   text-align: left;
