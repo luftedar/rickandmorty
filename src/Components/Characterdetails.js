@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useSelector } from 'react-redux';
-import { BsBackspace } from 'react-icons/bs';
+import { BsBackspace, BsDot } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Characters from './Characters';
 
@@ -11,23 +11,41 @@ function Characterdetails() {
   const characters = useSelector((state) => (state.charactersReducer));
   const trueCharacter = (characters.filter((character) => character.id === pageID))[0];
   return (
-    <div>
-      <Link to ="/characters"><BsBackspace><Characters/></BsBackspace></Link>
-      Character Name:
-      {trueCharacter.name}
-      Character Status:
-      {trueCharacter.status}
-      Character Species:
-      {trueCharacter.species}
-      Character Gender:
-      {trueCharacter.gender}
-      Character Origin:
-      {trueCharacter.origin.name}
-      Character Location:
-      {trueCharacter.location.name}
-      Character Episodes:
-      {trueCharacter.episode.length}  
-    </div>
+      <div className="char-details-bg">
+        <div className="char-details">
+          <div className="detail-image">
+          <div>
+            <img src={trueCharacter.image} alt={trueCharacter.image} />
+          </div>
+          <div className="go-back">
+            <Link to ="/characters"><BsBackspace><Characters/></BsBackspace></Link>
+          </div>
+          </div>
+          <div className="detail-desc">
+            <h1>{trueCharacter.name}</h1>
+            <ul className="detail-ul">
+              <li>Character Status:
+                {trueCharacter.status === "Alive" ? 
+                <span> {trueCharacter.status} <BsDot className="green-dot"/></span> :
+                trueCharacter.status === "Dead" ?
+                <span>{trueCharacter.status} <BsDot className="red-dot"/></span> :
+                <span>{trueCharacter.status} <BsDot className="black-dot" /></span>
+                }
+              </li>
+              <li>Species:
+              {trueCharacter.species}</li>
+              <li>Gender:
+              {trueCharacter.gender}</li>
+              <li>Origin:
+              {trueCharacter.origin.name}</li>
+              <li>Location:
+              {trueCharacter.location.name}</li>
+              <li>Played Episodes:
+              {trueCharacter.episode.length}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
   );
 }
 
