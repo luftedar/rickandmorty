@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { Route, Switch } from 'react-router-dom';
 import Characterdetails from './Characterdetails';
 import Characters from './Characters';
@@ -15,7 +13,7 @@ function Appcontainer() {
         <Route path="/characters">
           <Characters />
         </Route>
-        <Route path="/character/:id" children={ <Characterdetails /> }>
+        <Route path="/character/:id">
           <Characterdetails />
         </Route>
       </Switch>
