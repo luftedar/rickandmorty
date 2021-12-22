@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { useSelector } from 'react-redux';
-import { BsBackspace, BsDot } from 'react-icons/bs';
+import { BsBackspace } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Characters from './Characters';
 
@@ -26,10 +26,10 @@ function Characterdetails() {
             <ul className="detail-ul">
               <li>Character Status:
                 {trueCharacter.status === "Alive" ? 
-                <span> {trueCharacter.status} <BsDot className="green-dot"/></span> :
+                <span> {trueCharacter.status} <div className="green-dot"/></span> :
                 trueCharacter.status === "Dead" ?
-                <span>{trueCharacter.status} <BsDot className="red-dot"/></span> :
-                <span>{trueCharacter.status} <BsDot className="black-dot" /></span>
+                <span>{trueCharacter.status} <div className="red-dot"/></span> :
+                <span>{trueCharacter.status} <div className="black-dot" /></span>
                 }
               </li>
               <li>Species:
