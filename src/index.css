@@ -196,3 +196,29 @@
 .red-dot {
   background-color: red;
 }
+
+.char-details {
+  background-color: rgba(186, 233, 147, 0.075);
+  height: 100vh;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.character-stats-header {
+  padding: 3px;
+}
+
+.detail-desc {
+  padding: 3px;
+  border-top: 1px solid rgb(43, 52, 82);
+  border-bottom: 1px solid rgb(43, 52, 82);
+}
+
+.episode-exp {
+  padding: 3px;
+}

@@ -86,17 +86,12 @@ function Characterdetails() {
               {'  '}
               {trueCharacter.gender}
             </li>
-
-            <li>
-              Played Episodes:
-              {'  '}
-            </li>
           </ul>
-          <p>Played on {trueCharacter.episode.length} Episode(s) out of 51 Episodes</p>
+          
         </div>
         <Chart
-            width={'500px'}
-            height={'300px'}
+            width={'250px'}
+            height={'150px'}
             chartType="PieChart"
             loader={<div>Loading Chart</div>}
             data={[
@@ -110,11 +105,10 @@ function Characterdetails() {
               51 - trueCharacter.episode.length
             ],
             ]}
-            options={{
-              title: 'Played Episodes',
-            }}
             rootProps={{ 'data-testid': '1' }}
-          />
+        />
+        <p className="episode-exp">Played on {trueCharacter.episode.length} Episode(s)</p>
+        <p className="episode-exp">Total Episodes: 51</p>
       </div>
   );
 }
