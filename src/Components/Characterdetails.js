@@ -11,7 +11,6 @@ function Characterdetails() {
   const pageID = parseInt(urlArray[urlArray.length - 1], 10);
   const characters = useSelector((state) => (state.charactersReducer));
   const trueCharacter = (characters.filter((character) => character.id === pageID))[0];
-  console.log(trueCharacter);
   return (
       <div className="char-details">
         <div className="detail-header">
@@ -89,24 +88,27 @@ function Characterdetails() {
           </ul>
           
         </div>
-        <Chart
-            width={'250px'}
-            height={'150px'}
-            chartType="PieChart"
-            loader={<div>Loading Chart</div>}
-            data={[
-              ['Episodes', 'Total Episodes'],
-              ['Played Episodes', trueCharacter.episode.length === 51 ?
-              (51 + trueCharacter.episode.length) / 102 :
-              trueCharacter.episode.length
-            ],
-              ['Not Played', trueCharacter.episode.length === 51 ?
-              (51 - trueCharacter.episode.length) / 102 :
-              51 - trueCharacter.episode.length
-            ],
-            ]}
-            rootProps={{ 'data-testid': '1' }}
-        />
+        <div className="chart">
+          <Chart
+              width={'250px'}
+              height={'150px'}
+              background={'rgba(186, 233, 147, 0.075)'}
+              chartType="PieChart"
+              loader={<div>Loading Chart</div>}
+              data={[
+                ['Episodes', 'Total Episodes'],
+                ['Played Episodes', trueCharacter.episode.length === 51 ?
+                (51 + trueCharacter.episode.length) / 102 :
+                trueCharacter.episode.length
+              ],
+                ['Not Played', trueCharacter.episode.length === 51 ?
+                (51 - trueCharacter.episode.length) / 102 :
+                51 - trueCharacter.episode.length
+              ],
+              ]}
+              rootProps={{ 'data-testid': '1' }}
+          />
+        </div>
         <p className="episode-exp">Played on {trueCharacter.episode.length} Episode(s)</p>
         <p className="episode-exp">Total Episodes: 51</p>
       </div>
