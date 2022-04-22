@@ -1,59 +1,77 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Rick and Morty
 
-> One paragraph statement about the project.
+> Rick and Morty Characters Web Page.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Single Page Application that uses Rick and Morty API along with React & Redux. You find information about characters in the following project.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript, CSS
+- React, Redux
+- NPM, Developer Tools
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://rickandmortyandorcun.netlify.app/)
+[Loom Link](https://www.loom.com/share/8ba9509fc094404cbc624c6750de8955)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+
+- Clone the project:
+
+```
+git clone https://github.com/luftedar/rickandmorty.git
+```
+
+- cd into the folder
+
+```
+cd rickandmorty
+```
+
+- Install NPM
+
+```
+npm install
+```
+
+- Open with a code editor
+
+```
+code .
+```
+
+- Start local server
+
+```
+npm start
+```
+
+- For testing
+
+```
+npm run test
+```
 
 ### Prerequisites
 
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Text Editor
+- Web Browser
+- NPM
 
 ## Authors
 
-👤 **Author1**
+👤 **Orçun Uğur**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/luftedar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/orcunugur)
 
 ## 🤝 Contributing
 
@@ -67,9 +85,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- This project is the Microverse's third module's capstone project
+- Thanks to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is author of the original design.
 
 ## 📝 License
 

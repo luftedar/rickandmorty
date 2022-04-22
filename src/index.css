@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Permanent+Marker&family=Roboto+Slab:wght@300;400;500;600;900&family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(43, 52, 82);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.d-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.s-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.home-go-back {
+  position: fixed;
+  top: 25px;
+  right: 50px;
+  font-size: 40px;
+  z-index: 25;
+}
+
+.home-page::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("img/homeimage.jpg");
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.home-link {
+  width: 100vw;
+  height: calc(100vh / 2);
+  text-decoration: none;
+  font-size: 3rem;
+  position: fixed;
+  top: 50%;
+}
+
+.home-link:hover {
+  box-shadow: -1px 1px 10px 5px #000;
+  text-shadow: 2px 2px 9px #000;
+}
+
+.character-header {
+  height: 40vh;
+  text-align: left;
+  padding-top: 100px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.character-header::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 40vh;
+  opacity: 0.3;
+  background-image: url("img/charactersimage.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.character-container {
+  height: 160px;
+}
+
+.character-listing {
+  background-color: rgba(186, 233, 147, 0.075);
+}
+
+.character-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  border-radius: 5px;
+  list-style: none;
+  background-color: #fff;
+}
+
+.character-item:hover {
+  box-shadow: 0 10px 16px 20px rgba(0, 0, 0, 0.2);
+}
+
+.character-image {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.list-of-characters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.card-description {
+  text-align: center;
+}
+
+.card-description > * {
+  margin-top: 10px;
+}
+
+.filter-status {
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  align-items: center;
+}
+
+.filter-status select {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #fff;
+  border: 4px groove #fff;
+  border-radius: 6px;
+  transition: 2s;
+}
+
+.filter-status select:hover {
+  border: 4px groove rgba(37, 197, 58, 0.952);
+}
+
+.card-button {
+  margin-top: 40px;
+}
+
+.card-button > * {
+  border: 1px solid rgba(163, 163, 163, 0.199);
+  background-color: rgba(37, 197, 58, 0.952);
+  border-radius: 14px;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.card-button > *:hover {
+  background-color: rgba(43, 219, 66, 0.952);
+  box-shadow: 0 2px 4px 3px rgba(43, 219, 66, 0.95);
+}
+
+.detail-image {
+  width: 100%;
+}
+
+.detail-image img {
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.green-dot {
+  background-color: rgba(37, 197, 58, 0.952);
+}
+
+.red-dot {
+  background-color: red;
+}
+
+.char-details {
+  background-color: rgba(186, 233, 147, 0.075);
+  height: 100vh;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.character-stats-header {
+  padding: 3px;
+}
+
+.detail-desc {
+  padding: 3px;
+  border-top: 1px solid rgb(43, 52, 82);
+  border-bottom: 1px solid rgb(43, 52, 82);
+}
+
+.episode-exp {
+  padding: 3px;
+}
